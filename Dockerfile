@@ -45,6 +45,12 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.3-Linux-x86_64.
 RUN wget https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py     &&\
     python3 get-poetry.py      &&\
     echo "source $HOME/.poetry/env"
+####   Shell Formatting Libraries ####
+
+RUN wget http://ftp.jp.debian.org/debian/pool/main/g/golang-mvdan-sh/shfmt_3.5.1-1_amd64.deb
+
+RUN apt install -y ./shfmt_3.5.1-1_amd64.deb
+
 
 
 
